@@ -24,6 +24,14 @@ namespace DBSystem.BLL
             }
         }
 
+        public Player FindByID2(int id)
+        {
+            using (var context = new ContextFSIS())
+            {
+                return context.Players.Find(id);
+            }
+        }
+
         public List<Player> List()
         {
             using (var context = new ContextFSIS())
@@ -37,6 +45,17 @@ namespace DBSystem.BLL
             using (var context = new ContextFSIS())
             {
                 context.Players.Add(item);
+                context.SaveChanges();
+                return item.PlayerID;
+
+            }
+        }
+
+        public int Update(Player item)
+        {
+            using (var context = new ContextFSIS())
+            {
+                context.Entry(item).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
                 return item.PlayerID;
 

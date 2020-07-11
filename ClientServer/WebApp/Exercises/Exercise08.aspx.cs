@@ -30,7 +30,7 @@ namespace WebApp.Exercises
                 info.Sort((x, y) => x.FirstName.CompareTo(y.FirstName));
                 List01.DataSource = info;
                 List01.DataTextField = nameof(Player.FirstandLast);
-                List01.DataValueField = nameof(Player.FirstandLast);
+                List01.DataValueField = nameof(Player.PlayerID);
                 List01.DataBind();
                 List01.Items.Insert(0, "select...");
             }
@@ -50,7 +50,7 @@ namespace WebApp.Exercises
                 try
                 {
                     string playerid = List01.SelectedValue;
-                    Response.Redirect("Exercise08.aspx?page=50&pid=" + playerid + "&add=" + "no");
+                    Response.Redirect("Exercise08CRUD.aspx?pid=" + playerid + "&add=" + "no");
                 }
                 catch (Exception ex)
                 {
@@ -63,7 +63,7 @@ namespace WebApp.Exercises
             try
             {
                 string playerid = List01.SelectedValue;
-                Response.Redirect("Exercise08.aspx?page=50&pid=" + playerid + "&add=" + "yes");
+                Response.Redirect("Exercise08CRUD.aspx?pid=" + playerid + "&add=" + "yes");
             }
             catch (Exception ex)
             {

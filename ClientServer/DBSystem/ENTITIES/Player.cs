@@ -25,7 +25,7 @@ namespace DBSystem.ENTITIES
 
         public string MedicalAlertDetails { get; set; }
 
-        public int GuardianID { get; set; }
+        public int? GuardianID { get; set; }
 
         public int TeamID { get; set; }
 

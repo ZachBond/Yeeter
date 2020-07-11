@@ -14,7 +14,7 @@ namespace WebApp.Exercises
             MessageLabel.Text = "";
             if (!Page.IsPostBack)
             {
-                BindList();
+                //BindList();
             }
         }
     }

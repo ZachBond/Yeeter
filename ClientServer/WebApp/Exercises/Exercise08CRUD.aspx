@@ -15,7 +15,7 @@
                 </asp:Label>
         </div>
         <div class="col-8 text-left">
-                <asp:TextBox ID="ID" runat="server" ReadOnly="true">
+                <asp:TextBox ID="PlayerID" runat="server" ReadOnly="true">
                 </asp:TextBox>
         </div>
     </div>
@@ -25,7 +25,7 @@
                      AssociatedControlID="FirstName"></asp:Label>
         </div>
         <div class="col-8 text-left">
-                <asp:TextBox ID="Name" runat="server"></asp:TextBox>
+                <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
         </div>
     </div>
 
@@ -35,7 +35,7 @@
                      AssociatedControlID="LastName"></asp:Label>
         </div>
         <div class="col-8 text-left">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="LastName" runat="server"></asp:TextBox>
         </div>
     </div>
 
@@ -68,7 +68,17 @@
                      AssociatedControlID="Gender"></asp:Label>
         </div>
         <div class="col-8 text-left">
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Gender" runat="server"></asp:TextBox>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 text-right">
+                  <asp:Label ID="Label5" runat="server" Text="Age"
+                     AssociatedControlID="Age"></asp:Label>
+        </div>
+        <div class="col-8 text-left">
+                <asp:TextBox ID="Age" runat="server"></asp:TextBox>
         </div>
     </div>
     <br />
